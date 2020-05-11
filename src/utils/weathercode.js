@@ -10,7 +10,7 @@ module.exports= (longitude, latitude, callback) => {
         } else if (body.error) {
             callback("specify proper coordinates", undefined);
         } else {
-            callback(undefined, body.current.weather_descriptions[0] + ". It is currently " + body.current.temperature + " degress out. But it feels like " + body.current.feelslike + " degrees");
+            callback(undefined, body.current.weather_descriptions[0] + ". It is currently " + body.current.temperature + " degress out. But it feels like " + body.current.feelslike + " degrees and the humidity is " + body.current.humidity);
         }
 
     });
